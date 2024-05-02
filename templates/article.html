@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body %}
+{% if article %}
+
+
+
+<h3>{{article.title}}</h3>
+<hr>
+ <h5 >Author: <b style= "color:orange;">{{article.author}}</b></h5>
+<hr>
+Date: {{article.created_date}}
+<hr>
+<div class = "container" style = "background-color:#797977; color:white; border-radius:10px; font-size:20px; overflow-wrap: break-word;">
+
+    {{article.content|safe}}
+</div>
+
+
+
+{% else %}
+<div class = "alert alert-warning">
+    Böyle bir makale bulunmuyor.
+</div>
+
+{% endif %}
+
+
+
+{% endblock body %}

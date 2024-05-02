@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <h1 style="text-align: center;">Welcome...</h1>
+</div>
+<div style="justify-content: center; align-items: center; display: flex; flex-direction: row; margin-top: 100px;">
+    <div style="max-width: 200px; background-color: #000; margin-right: 100px; border-radius: 20px;">
+        <a href="/teacher/login" class = "btn btn-success" style="padding: 100px; border-radius: 20px;">
+            <b style="font-size: 24px;">Teacher</b>
+        </a>
+    </div>
+    <div style="max-width: 200px; background-color: #000; margin-right: 100px; border-radius: 20px;">
+        <a href="/student/login" class = "btn btn-success" style="padding: 100px; border-radius: 20px;">
+            <b style="font-size: 24px;">Student</b>
+        </a>
+    </div>
+</div>
+{% endblock body %}

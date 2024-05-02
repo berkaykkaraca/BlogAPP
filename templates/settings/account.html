@@ -1,0 +1,32 @@
+{% extends "/includes/settings.html" %}
+{% block settings %}
+<a class="list-group-item list-group-item-action active" data-toggle="list" href="/settings/{{session["username"]}}/account"
+                        role="tab">
+                        Account
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#changepassword" role="tab">
+                        Change Password
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Privacy and safety
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Email notifications
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Web notifications
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Widgets
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Your data
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="/settings/{{session["username"]}}/deleteaccount" role="tab">
+                        Delete account
+                    </a>
+{% endblock settings %}
+{% block set %}
+
+
+{% endblock set %}

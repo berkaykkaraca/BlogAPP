@@ -1,0 +1,43 @@
+{% extends "/includes/settings.html" %}
+{% from "includes/formhelper.html" import render_field %}
+{% block settings %}
+<a class="list-group-item list-group-item-action " data-toggle="list" href="/settings/{{session["username"]}}/account"
+                        role="tab">
+                        Account
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#changepassword" role="tab">
+                        Change Password
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Privacy and safety
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Email notifications
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Web notifications
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Widgets
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+                        Your data
+                    </a>
+                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="/settings/{{session["username"]}}/deleteaccount" role="tab">
+                        Delete account
+                    </a>
+                    lkhlkhlkl
+<input type="submit" onclick="return confirm('Are you sure?')" >
+{% endblock settings %}
+
+{% block set %}
+<div class = "container">
+    <form method="Post">
+        {{ render_field(form.password) }}   
+        {{ render_field(form.confirm) }}       
+    
+       
+      
+        <button type="submit" class="btn btn-primary" onclick="window.confirm('Are you sure you want to clear all entries?');">DELETE ACCOUNT</button>
+    </form>
+{% endblock set %}

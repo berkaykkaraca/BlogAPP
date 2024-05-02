@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class = "container" style = "display:flex; flex-direction:row; justify-content:space-between;">
+<h3>Questions</h3>
+{% if session["type"]=="teacher" %}
+<a class = "btn btn-danger" href="/askquestion" style = " width:150px;">Ask Question</a>
+{% endif %}
+</div>
+<hr>
+
+{% if questions %}
+
+
+
+<form action="/searchquestion" method = "Post">
+
+
+  <input type="text" name = "keyword" class=" input-sm" maxlength="64" placeholder="Search">
+  <button type="submit" class="btn btn-primary btn-sm">Search</button>
+
+</form>
+<hr>
+<ul class="list-group">
+    {% for question in questions %}
+    <li style = "background-color:#3A7EA1; margin-top:10px; border-radius:10px; font-size:18px;" class = "list-group-item"><a href="/question/{{question.question_id}}" style = " color:#EFC94E;"><b>{{question.title}}</b></a></li>
+    
+    
+    {% endfor %}
+  </ul>
+
+{% else %}
+<div class ="alert alert-danger" > Henüz Burada hiç makale bulunmuyor.</div>
+{% endif %}
+
+{% endblock  %}
